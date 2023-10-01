@@ -1,11 +1,12 @@
 import java.time.LocalDate;
+import java.util.Comparator;
 
 public class Event {
 
     private String name;
     private String subject;
     private boolean isCompleted;
-    private LocalDate deadline;
+    public LocalDate deadline;
 
     // Contructor for the event class.
     // Uses the name, subject, and time parameter to make a event object with isCompleted = false
@@ -23,7 +24,12 @@ public class Event {
     public boolean getStatus() { return isCompleted; }
 
     public void setComplete() { isCompleted = true; }
+}
 
-
-    
+class SortbyDate implements Comparator<Event> {
+    // Method
+    // Sorting in ascending order of date
+    public int compare(Event a, Event b) {
+        return a.getDeadline().compareTo(b.getDeadline());
+    }
 }
