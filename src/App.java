@@ -1,33 +1,26 @@
 import java.io.FileInputStream;
-import java.util.*;
-import java.time.LocalDate;
-
+import java.util.Scanner;
+import java.util.Iterator;  
+import java.util.List;  
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-        System.out.println("test2");
+        System.out.println("test");
+        System.out.println("test");
+        Scraper me = new Scraper(); 
+        //List<Event> myList = me.returnEvents("src/test.txt");
+        // for (Event event : myList) {
+        //     System.out.println(event.getName());
+        // }
 
-        LocalDate one = LocalDate.of(2023, 10, 3);
-        LocalDate two = LocalDate.of(2023, 12, 3);
-        LocalDate three = LocalDate.of(2023, 11, 3);
-
-        Event event1 = new Event("Assignment 1", "CPSC 210", one);
-        Event event2 = new Event("Assignment 2", "CPSC 210", two);
-        Event event3 = new Event("Assignment 3", "CPSC 210", three);
-
-        Queue<Event> queue = new PriorityQueue<>(1, new SortbyDate());
-        queue.add(event1);
-        queue.add(event2);
-        queue.add(event3);
-
-        System.out.println(queue.remove().getName());
-        System.out.println(queue.remove().getName());
-        System.out.println(queue.remove().getName());
-
-        // System.out.println(queue.remove());
-        // System.out.println(queue.remove());
-        // System.out.println(queue.remove());
 
     }
 }
+
+     //   FileInputStream fis = new FileInputStream("src/test.txt");
+    //  Scanner sc = new Scanner(fis);
+       // while (sc.hasNextLine()) {
+       //     System.out.println(sc.nextLine());
+       // }
+       // sc.close();
+   //}
